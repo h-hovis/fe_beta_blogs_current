@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BlogService } from '../../core/services/blog.service';
 import { Blog } from '../../shared/models/blog';
 import { BlogListComponent } from '../../shared/components/blog-list/blog-list.component';
@@ -11,7 +11,7 @@ import { BlogListComponent } from '../../shared/components/blog-list/blog-list.c
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  homeBlogs: Blog[] = []
+  homeBlogs: Blog[] = [];
 
   constructor(private blogService: BlogService) {}
 
